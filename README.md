@@ -38,9 +38,11 @@ to convert "warm white" 255, 172, 68 -\> FF, AC, 44 -\> "7e 07 05 03 ff ac 44 00
 	`echo "7e 04 04 00 ff ff ff 00 ef" | xxd -r -p > /dev/udp/192.168.1.62/5000`
  - Change Color Warm White:
 	`echo "7e 07 05 03 ff ac 44 00 ef" | xxd -r -p > /dev/udp/192.168.1.62/5000`
+ - Change Color Cool White:
+	`echo "7e 07 05 03 ff ff ff 00 ef" | xxd -r -p > /dev/udp/192.168.1.62/5000`
 
 if you get an error about folder not found, use "bash", not "sh" as sh does not have remote udp access unless you compiled it with a special option.
 
 Now you can also use `at` or `cron` commands and set it on/off at specific time.  I set up a sunset calculating program and then set an at command to turn it on at sunset daily, then use cron to turn it off at night.
 
-Use code at own risk.
+Use code at own risk. (this is my first git)
