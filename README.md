@@ -26,15 +26,13 @@ Set the bulb any RGB color
 change the corresponding value of RR, GG or BB in hex
 
 to convert "warm white" 255, 172, 68 -> FF, AC, 44 -> "7e 07 05 03 ff ac 44 00 ef"
+On:
+	echo "7e 04 04 01 ff ff ff 00 ef" | xxd -r -p > /dev/udp/192.168.1.62/5000
+Off:
+	echo "7e 04 04 00 ff ff ff 00 ef" | xxd -r -p > /dev/udp/192.168.1.62/5000
+Change Color Warm White:
+	echo "7e 07 05 03 ff ac 44 00 ef" | xxd -r -p > /dev/udp/192.168.1.62/5000
 
 if you get an error about folder not found, use "bash", not "sh" as sh does not have remote udp access.
-
-Scrip Usage:
-	.\bulb.sh ?
-	turn bulb on or 1, anything else its off. runs on_bulb.sh and off_bulb.sh with bash
-	defaults to cool white when turning on.
-	
-	.\color.sh RR GG BB
-	you must turn on bulb first with script, then you can set the color.
 
 Use code at own risk.
