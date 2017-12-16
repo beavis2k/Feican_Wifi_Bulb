@@ -10,7 +10,7 @@ I got some values to turn it on and off, then next to set it to various colors.
 Thanks to other projects that work in a similar way but different codes, I was able to make it work with a Raspberry Pi Zero
 I can turn the bulb on, off and set a specific RGB color, but not the fancy blink or other modes.  Turning it on, off and set the color was more than enough for me.
 
-First use the App to connect to your wifi, for best results use an old android phone 4.x 
+First use the App to connect to your wifi, for best results use an old android phone 4.x
 Second find your bulb's IP address (ex. 192.168.1.62) Mac is 5c cf 7f ?? ?? ??, or Expressif 
 Install the linux utility xxd, it converts a string to hex.
 send the code with
